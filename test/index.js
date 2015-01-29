@@ -114,6 +114,8 @@ test('Grunt-localizr', function (t) {
             t.end();
         });
     });
-
+    t.on('end', function() {
+        process.chdir(path.join(__dirname, '..'));
+    });
 });
 
