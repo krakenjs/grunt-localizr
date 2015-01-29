@@ -7,8 +7,7 @@ var grunt = require('grunt'),
 
 grunt.loadNpmTasks('grunt-force-task');
 test('Grunt-localizr', function (t) {
-    var original = process.cwd();
-    process.chdir(path.join(process.cwd(), 'test', 'fixtures'));
+    process.chdir(path.join(__dirname, 'fixtures'));
     grunt.task.init = function() {};
     require('../tasks/index')(grunt);
 
@@ -115,8 +114,6 @@ test('Grunt-localizr', function (t) {
             t.end();
         });
     });
-    t.on('end', function() {
-        process.chdir(original);
-    });
+
 });
 
