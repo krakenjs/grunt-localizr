@@ -3,8 +3,8 @@ language: node_js
 node_js:
   - "0.12"
   - "0.10"
-  - "iojs"
-  - "iojs-v1.1.0"
+  - "4.x"
+  - "5.x"
 
 script:
   - "npm run-script cover"
